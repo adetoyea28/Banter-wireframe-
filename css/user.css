@@ -62,7 +62,7 @@
     margin-bottom: 10px;
 }
 
-@media (max-width:400pc){
+@media (max-width:400px){
      nav{
      position:relative;
      left:40px;
