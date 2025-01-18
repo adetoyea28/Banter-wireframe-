@@ -1,6 +1,6 @@
 async function getLiveMatches(){
   try{
-    let res = await fetch('https://api-banter-backend.onrender.com/api/matches/live',{
+    let res = await fetch('https://cors-anywhere.herokuapp.com/https://api-banter-backend.onrender.com/api/matches/live',{
 			  method: 'GET',
 			  headers:{
 				'Content-Type':'application/json',
@@ -36,7 +36,7 @@ renderMatches()
 
 async function setMatchId(){
   try{
-    let res = await fetch(`https://api-banter-backend.onrender.com/api/matches/live`);
+    let res = await fetch(`https://cors-anywhere.herokuapp.com/https://api-banter-backend.onrender.com/api/matches/live`);
     return await res.json();
   }catch(err){
     return err;
