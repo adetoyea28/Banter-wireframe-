@@ -13,7 +13,7 @@
         <header>
             <h1>Everything Banter</h1>
             <nav>
-                <a class="nav-links" href="../index.html">Home</a>
+                <a class="nav-links" href="./index.html">Home</a>
                 <a class="nav-links" href="./login.html">Sign In</a>
             </nav>
         </header>
@@ -22,11 +22,10 @@
             <p>Gain access to a community all about the beautiful game.</p>
             <img src="../images/Football-Vector-Illustration.jpg" height="320" width="300">
             <div id="form">
-                <form>
+                <form action="https://api-banter-backend.onrender.com/api/auth/register">
                     <input type="text" name="username" placeholder="Enter Full Name">
                     <input type="text" name="email" placeholder="Enter Email">
                     <input type="password" name="password" placeholder="Enter Strong password">
-                    <input type="text" name="favoriteClub" placeholder="Enter Favorite Club">
                     <a id="ca" class="link" href="./user.html">Create Account</a>
                 </form>
             </div>
