@@ -1,3 +1,5 @@
+
+@media (max-width: 1400px){
 .nav-links{
     left: 45%;
     width: 150px;
@@ -61,7 +63,7 @@
     color: white;
     margin-bottom: 10px;
 }
-
+}
 @media (max-width:400px){
      nav{
      position:relative;
