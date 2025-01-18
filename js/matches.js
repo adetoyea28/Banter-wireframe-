@@ -1,6 +1,6 @@
 async function getLiveMatches(){
   try{
-    let res = await fetch('https://api-banter-backend.onrender.com/api/matches',{
+    let res = await fetch('https://api-banter-backend.onrender.com/api/matches/live',{
 			  method: 'GET',
 			  headers:{
 				'Content-Type':'application/json',
@@ -16,24 +16,27 @@ async function getLiveMatches(){
 async function renderMatches(){
   let matches = await getLiveMatches();
   let html = "";
-  matches.forEach((match) => {
-  let htmlSegment = `<div class="match">
-		     <p class="clubs>${match.homeTeam.name} vs ${match.awayTeam.name}</p>
-  		     <p class="clubs>Score-Line: ${match.score.fullTime.home} - ${match.status} - ${match.score.fullTime.away}</p>
-  		     <a class="chat-link" onlick="setMatchId(${match.id})" href="./chatRoom.html">Enter Chat Room<a>
-                     </div>`;
-  html += htmlSegment;
-})
+  let i = 0;
 
+  while (i < matches.Matches.length){
+    matchList = matches.Matches[i];
+    htmlSegment = `<div class="match">
+                    <p class="clubs">${matchList.homeTeam.name} vs ${matchList.awayTeam.name}</p>
+                    <p class="clubs">Score-Line: ${matchList.score.fullTime.home} - ${matchList.status} - ${matchList.score.fullTime.away}</p>
+                    <a class="chat-link" onclick="setMatchId()" href="./chatRoom.html">Enter Chat Room</a>
+                </div>`
+    html += htmlSegment;
+    i++;
+  }
 let container = document.getElementById('dashboard');
 container.innerHTML = html;
 }
 
 renderMatches()
 
-async function setMatchId(id){
+async function setMatchId(){
   try{
-    let res = await fetch(`https://api-banter-backend.onrender.com/api/matches:${id}`);
+    let res = await fetch(`https://api-banter-backend.onrender.com/api/matches/live`);
     return await res.json();
   }catch(err){
     return err;
@@ -42,6 +45,7 @@ async function setMatchId(id){
 
 async function renderMatch(){
   let match = await setMatchId();
+  matchList = match.Matches[1];
   let html = `<ul>
 		<li id="home" class="data-point-stat"><b>Home Club:</b><br>${match.homeTeam.name}</li>
                 <li id="away" class="data-point-stat"><b>Away Club:</b><br>${match.awayTeam.name}</li>
@@ -56,7 +60,7 @@ async function renderMatch(){
                 <li id="time"><b>Date:</b><br>${match.utcDate}</li>
 	      </ul>`;
   let container = document.getElementById('db');
-container.innerHTML = html;
+container.nodeValue = html;
 }
 
 

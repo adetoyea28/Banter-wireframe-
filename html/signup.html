@@ -8,6 +8,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <link rel="stylesheet" href="../css/index.css" type="text/css"/>
         <link rel="stylesheet" href="../css/register.css" type="text/css"/>
+        <script src="../js/userAuth.js"></script>
     </head>
     <body>
         <header>
@@ -22,11 +23,12 @@
             <p>Gain access to a community all about the beautiful game.</p>
             <img src="../images/Football-Vector-Illustration.jpg" height="320" width="300">
             <div id="form">
-                <form action="https://api-banter-backend.onrender.com/api/auth/register">
+                <form action="https://api-banter-backend.onrender.com/api/auth/register" method="POST">
                     <input type="text" name="username" placeholder="Enter Full Name">
                     <input type="text" name="email" placeholder="Enter Email">
                     <input type="password" name="password" placeholder="Enter Strong password">
-                    <a id="ca" class="link" href="./user.html">Create Account</a>
+                    <input id="fav" type="text" name="favoriteClub" placeholder="Enter Favourite Club">
+                    <a id="ca" onclick="storeClub()" class="link" href="./user.html">Create Account</a>
                 </form>
             </div>
         </main>

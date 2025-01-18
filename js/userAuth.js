@@ -1,9 +1,5 @@
-function login(){
-  const username = document.getElementById("usrname").value;
-  const password = document.getElementById("psswd").value;
 
-  const httpRequest = new XMLHttpRequest();
+const favClub = document.getElementById('fav').value;
 
-  httpRequest.onreadystateChange = writeContent;
-  httpRequest.open("POST", "https://api-banter-backend.onrender.com/api/auth/login"
-}
+let label = document.getElementById("fav-club");
+label.innerHTML = `<b>Favorite Club:</b><br>${favClub}`;
