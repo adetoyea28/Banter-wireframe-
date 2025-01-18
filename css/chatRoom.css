@@ -1,0 +1,138 @@
+.data-point-stat{
+    margin-right: 120px;
+}
+
+#time{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#chat-room{
+    position: relative;
+    top: 100%;
+    left: 5%;
+    width: 90%;
+    height: 550px;
+}
+
+#display{
+    position: relative;
+    left: 2%;
+    top: 1%;
+    height: 80%;
+    width: 60%;
+    background-color: #012;
+}
+
+textarea{
+    background-color: #012;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    position: absolute;
+    left: 63%;
+    text-align: center;
+    top: 17%;
+    border-radius: 10px;
+    width: 30%;
+    height: 60%;
+}
+
+button{
+    position: absolute;
+    width: 30.5%;
+    height: 50px;
+    line-height: 48px;
+    text-align: center;
+    background-color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    border-radius: 10px;
+    border-color: white;
+    border-style: solid;
+    left: 63%;
+    top: 80%;
+}
+
+button:hover{
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    background-color: #012;
+    color: white;
+}
+
+button:active{
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    background-color: white;
+    color: #012;
+}
+
+@media (max-width:400px){
+    .data-point-stat{
+    display:inline;
+    position:relative;
+    margin-right:60px;
+    text-align:left;
+    }
+    #home{
+    position:absolute;
+    left:60px;
+    top:20px;
+    }
+    #away{
+    position:absolute;
+    left:200px;
+    top:20px;
+    }
+    #last{
+    position:absolute;
+    top:80px;
+    left:60px;
+    }
+    .data-point-matches{
+    display:inline;
+    position:absolute;
+    text-align:left;
+    margin-right:30px;;
+    top:140px;
+    }
+    #gs-home{
+    left:60px;
+    }
+    #gs-away{
+    left:60px;
+    top:200px;
+    }
+    #time{
+    display:inline;
+    position:absolute;
+    top:260px;
+    left:60px;
+    }
+    #chat-room{
+    position:absolute;
+    top:630px;
+    left:1%;
+    width:97%;
+    height:670px;
+    }
+    #display{
+    display:block;
+    position:relative;
+    left:3%;
+    width:94%;
+    height:450px;
+    }
+    textarea{
+    position:relative;
+    width:60%;
+    height:70px;
+    left:2%;
+    top:20px;
+    }
+    #post{
+    left:66%;
+    top:565px;
+    height:70px;
+    }
+}

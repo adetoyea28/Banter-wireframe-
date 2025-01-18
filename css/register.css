@@ -1,0 +1,38 @@
+form{
+    position: relative;
+    top: 15%;
+}
+
+input{
+    width: 200px;
+    display: block;
+    margin-bottom: 10px;
+    height: 30px;
+    text-align: center;
+    border-radius: 5px;
+    border-style: solid;
+    border-color: white;
+    position: relative;
+    left: 28%;
+}
+
+#ca{
+    position: relative;
+    margin-top: 1%;
+    left: 35%;
+}
+
+@media (max-width:400px){
+	input{
+	left:60px;
+	}
+	#form {
+	height:300px;
+	}
+	#ca{
+	left:90px;
+	}
+	#main{
+	height:800px;
+	}
+}

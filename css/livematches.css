@@ -1,0 +1,60 @@
+.match{
+    position: relative;
+    height: 150px;
+    width: 350px;
+    display: inline-block;
+    left: 5%;
+    top: 5%;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+
+#dashboard{
+    overflow-y: scroll;
+}
+
+.clubs{
+    color: white;
+    display: block;
+    left: 0%;
+    position: relative;
+    text-align: center;
+}
+
+.chat-link{
+    display: inline-block;
+    text-align: center;
+    color: black;
+    text-decoration: none;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border-radius: 5px;
+    width: 150px;
+    margin-left: 75px;
+    height: 30px;
+    line-height: 28px;
+}
+
+.chat-link:hover{
+    transition-property: background-color;
+    transition-timing-function: ease-in-out;
+    transition-duration: 0.3s;
+    background-color: #012;
+    color: white;
+}
+
+@media (max-width:400px){
+    .match{
+    left:1%;
+    width:300px;
+    top:10px;
+    }
+    .chat-link{
+    position:relative;
+    top:25px;
+    }
+    .clubs{
+    position:relative;
+    top:15px;
+    }
+}
